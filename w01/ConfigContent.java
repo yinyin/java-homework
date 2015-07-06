@@ -1,3 +1,4 @@
+import java.util.Arrays;
 
 public class ConfigContent
 {
@@ -19,7 +20,7 @@ public class ConfigContent
 		ConfigContent c = (ConfigContent)(obj);
 		if(c.user_account.equals(this.user_account)
 			&& (c.employee_sn == this.employee_sn)
-			&& (c.server_address.equals(this.server_address)))
+			&& Arrays.equals(c.server_address, this.server_address))
 		{
 			return true;
 		}
